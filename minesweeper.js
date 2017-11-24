@@ -47,10 +47,10 @@ function countSurroundingMines () {
 
   var surroundingCells = lib.getSurroundingCells(board.cell[0], board.cell[1]);
 
-  for (j = 0; j <board.cells[2]; i++) {
+  for (j = 0; j <board.cells[2]; j++) {
     if (board.cells[2] === ) {
       var count = surroundingCells ++
+      }
+      return count
     }
-  }
-    return count
   }
