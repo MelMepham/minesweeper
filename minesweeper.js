@@ -3,18 +3,23 @@ document.addEventListener('DOMContentLoaded', startGame)
 // Define your `board` object here!
 var board = {
   cells:[
-    {isMine: true, hidden: true, row: 0, col: 0},
-    {isMine: true, hidden: true, row: 0, col: 1},
-    {isMine: true, hidden: true, row: 0, col: 2},
-    {isMine: true, hidden: true, row: 1, col: 0},
-    {isMine: true, hidden: true, row: 1, col: 1},
-    {isMine: true, hidden: true, row: 1, col: 2},
-    {isMine: true, hidden: true, row: 2, col: 0},
-    {isMine: true, hidden: true, row: 2, col: 1},
-    {isMine: true, hidden: true, row: 2, col: 2}]
+    {row: 0, col: 0, isMine: false, isMarked: false, hidden: true, surroundingMines: 2},
+    {row: 0, col: 1, isMine: false, isMarked: false, hidden: true, surroundingMines: 2},
+    {row: 0, col: 2, isMine: false, isMarked: false, hidden: true, surroundingMines: 2},
+    {row: 1, col: 0, isMine: false, isMarked: false, hidden: true, surroundingMines: 2},
+    {row: 1, col: 1, isMine: false, isMarked: false, hidden: true, surroundingMines: 2},
+    {row: 1, col: 2, isMine: false, isMarked: false, hidden: true, surroundingMines: 2},
+    {row: 2, col: 0, isMine: false, isMarked: false, hidden: true, surroundingMines: 2},
+    {row: 2, col: 1, isMine: false, isMarked: false, hidden: true, surroundingMines: 2},
+    {row: 2, col: 2, isMine: false, isMarked: false, hidden: true, surroundingMines: 2}]
 }
 
 function startGame () {
+
+  for (i = 0; i < board.cells[5]; i++) {
+      countSurroundingMines() =+ board.cells[5];
+    }
+
   // Don't remove this function call: it makes the game work!
   lib.initBoard()
 }
@@ -38,5 +43,14 @@ function checkForWin () {
 //
 // It will return cell objects in an array. You should loop through
 // them, counting the number of times `cell.isMine` is true.
-function countSurroundingMines (cell) {
-}
+function countSurroundingMines () {
+
+  var surroundingCells = lib.getSurroundingCells(board.cell[0], board.cell[1]);
+
+  for (j = 0; j <board.cells[2]; i++) {
+    if (board.cells[2] === ) {
+      var count = surroundingCells ++
+    }
+  }
+    return count
+  }
